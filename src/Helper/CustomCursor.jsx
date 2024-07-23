@@ -39,15 +39,15 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 pointer-events-none transition-transform duration-200 ease-out ${
+      className={`fixed top-0 left-0 pointer-events-none transition-transform duration-250 ease-out ${
         isHovered ? 'transform scale-150 bg-white' : 'bg-transparent'
       }`}
       style={{
         width: '3rem',
         height: '3rem',
         borderRadius: '50%',
-        border: '2px solid #CAA6F7',
-        // boxShadow: '0 0 10px white',
+        border: '2px solid #10b981',
+        boxShadow: '0 0 5px white',
         transform: `translate(${position.x}px, ${position.y}px)`,
       }}
     ></div>

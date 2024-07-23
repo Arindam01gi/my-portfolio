@@ -6,10 +6,12 @@
 
 
 :root{
-  --violate-theme-backgound-color : #1E1E2E;
+  --violate-theme-backgound-color : #1d1d1d;
+  /* --violate-theme-backgound-color : #1E1E2E; */
   --violate-theme-main-color: #CAA6F7;
   --violate-theme-sub-text-color: #ffffff;
-  --violate-theme-nav-background-color: #1E1E2E;
+  --violate-theme-nav-background-color: #1d1d1d;
+  /* --violate-theme-nav-background-color: #1E1E2E; */
 }
 
 *{
