@@ -34,3 +34,14 @@ body{
 #root{
   height: 100%;
 }
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section {
+  height: 100vh; /* Each section takes up the full viewport height */
+  scroll-snap-align: start;
+}

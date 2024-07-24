@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaReact, FaBars, FaBold } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const navlist = [
   {
@@ -9,12 +10,16 @@ const navlist = [
     to: "/"
   },
   {
-    label: "WORK",
-    to: "/portfolio"
-  },
-  {
     label: "ABOUT",
     to: "/about"
+  },
+  {
+    label: "WORK",
+    to: "/experinece"
+  },
+  {
+    label: "PROJECTS",
+    to: "/projects"
   },
   {
     label: "CONTACT",
@@ -32,13 +37,13 @@ const Navbar = () => {
   };
 
   const menuStyle = {
-    transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
-    transition: 'transform 1s ease-in-out',
+    transform: isMenuOpen ? "translateX(0)" : "translateX(100%)",
+    transition: "transform 1s ease-in-out"
   };
 
   return (
     <>
-      <div className="p-6 md:shadow-md backdrop-blur-md" >
+      <div className="p-6 md:shadow-md backdrop-blur-md ">
         <nav className="navbar flex justify-between align-center ">
           <div className=" text-body-green  font-mono pt-2 cursor-pointer ">
             <FaReact size={28} fontWeight={FaBold} />
@@ -51,7 +56,7 @@ const Navbar = () => {
                     className="m-2 font-bold text-body-green text-2xl font-mono px-8 py-2  hover:bg-white hover:bg-opacity-40  hover:rounded-full hover:backdrop-blur-md"
                     key={index}
                   >
-                    {nav.label}
+                    <Link to={`${nav.to}`}>{nav.label}</Link>
                   </li>
                 );
               })}
@@ -63,19 +68,20 @@ const Navbar = () => {
               {toggleIcon ? <HiX size={28} /> : <FaBars size={28} />}
             </div>
           </div>
+          <></>
         </nav>
       </div>
 
       {/* Mobile Menu */}
       {toggleIcon && (
         <div
-          className={` md:hidden backdrop-blur-md w-full h-full sticky` }
+          className={` md:hidden backdrop-blur-md w-full h-full sticky`}
           style={menuStyle}
         >
           <ul className="flex flex-col items-center shadow-lg">
             {navlist.map((nav, index) => (
               <li
-                className="m-2 font-bold text-body-green text-3xl font-mono px-8 py-2 mb-6 w-[90%] hover:border-y-2 hover:shadow-md hover:border-emerald-400 hover:rounded-full backdrop-blur-md"
+                className="m-2 font-bold text-body-green text-2xl font-mono px-8 py-2 mb-6 w-[90%] hover:border-y-2 hover:shadow-md hover:border-emerald-400 hover:rounded-full backdrop-blur-md"
                 key={index}
               >
                 {nav.label}
