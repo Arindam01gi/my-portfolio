@@ -1,52 +1,70 @@
-
 import './App.css';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Home from './container/Home';
 import About from './container/About'
 import Contact from './container/Contact';
-import Portfolio from './container/Portfolio'
 import Navbar from './components/Navbar';
 import CustomCursor from './Helper/CustomCursor';
-import { ParticlesComponent } from './utils/Particles';
 import Project from './container/Project';
 import Experience from './container/Experience';
-
+import { Element } from 'react-scroll';
 
 function App() {
 
-  const location = useLocation();
-  console.log("loaction", location)
   return (
-    <div className="App relative w-full h-screen overflow-hidden">
-
-
-      {location.pathname == '/' ? <div className="absolute inset-0 z-10">
-        <ParticlesComponent />
-      </div> : ""}
-
-      <div className="relative z-20">
-        <Navbar />
-        {/* <CustomCursor/> */}
-
-        <div className=''>
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/about' element={<About />}></Route>
-            <Route path='/conatct' element={<Contact />}></Route>
-            <Route path='/projects' element={<Project />}></Route>
-            <Route path='/experience' element={<Experience />}></Route>
-            {/* <Route path='/portfolio' element={<Portfolio />}></Route> */}
-          </Routes>
-
-        </div>
-
-      </div>
-
-
-
-
+    <div className="App overflow-x-hidden ">
+      <Navbar />
+      <SectionWatcher />
+      <Element name="home" id="home"  className="section">
+        <Home />
+      </Element>
+      <Element name="about" id="about" className="section">
+        <About />
+      </Element>
+      <Element name="experience" id="experience" className="section">
+        <Experience/>
+      </Element>
+      <Element name="projects" id="projects" className="section">
+        <Project />
+      </Element>
+      <Element name="contact" id="contact" className="section">
+        <Contact />
+      </Element>
     </div>
   );
+}
+
+const SectionWatcher = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('.section')
+    const options = {
+      root: null,
+      threshold: 0.5, // 50% visibility triggers the observer
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id; 
+          navigate(`/${sectionId}`);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+
+  }, [navigate])
+
+  return null;
 }
 
 export default App;

@@ -4,37 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-:root{
-  --violate-theme-backgound-color : #1d1d1d;
-  /* --violate-theme-backgound-color : #1E1E2E; */
-  --violate-theme-main-color: #CAA6F7;
-  --violate-theme-sub-text-color: #ffffff;
-  --violate-theme-nav-background-color: #1d1d1d;
-  /* --violate-theme-nav-background-color: #1E1E2E; */
-}
-
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-}
-
-html{
-  font-size: 62.5%;
-  height: 100%;
-}
-
-body{
-  background: var(--violate-theme-backgound-color);
-  height: 100%;
-}
-
-#root{
-  height: 100%;
-}
-
 .sections {
   display: flex;
   flex-direction: column;
