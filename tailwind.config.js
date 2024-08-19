@@ -14,6 +14,11 @@ module.exports = {
       fontFamily: {
         'fira': ['Fira Code', 'monospace'],
         'open-sans': ['Open Sans', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
+      fontSize: {
+        '32xl': '32rem', 
+        '20xl':'20rem'
       },
     },
   },

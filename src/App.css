@@ -36,5 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.box-shadow{
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+html {
+  --cursor-color: #08B24D
+}
 
+html.dark-mode {
+  --cursor-color: #fff
+}
 

@@ -13,10 +13,10 @@ const navlist = [
     label: "About",
     to: "about"
   },
-  {
-    label: "Experience",
-    to: "experinece"
-  },
+  // {
+  //   label: "Experience",
+  //   to: "experinece"
+  // },
   {
     label: "Projects",
     to: "projects"
@@ -30,6 +30,9 @@ const navlist = [
 const Navbar = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selected, setSelected] = useState('home')
+
+  console.log(selected)
 
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
@@ -41,11 +44,11 @@ const Navbar = () => {
   return (
     <>
       <div className="flex justify-center">
-        <div className="p-4 backdrop-blur-md fixed w-3/4 top-4 shadow-lg  ">
-          <nav className="navbar flex justify-between align-center ">
-            <div className="  font-sans cursor-pointer ">
-              <h1 className="flex text-white font-extrabold text-2xl">
-                <p className="text-body-green">&lt;A</p>rindam<p className="text-body-green">/&gt;</p>
+        <div className="p-3 backdrop-blur-md fixed w-5/6 top-8 border border-gray-300 rounded-lg z-10">
+          <nav className="navbar flex justify-between items-center ">
+            <div className=" cursor-pointer ">
+              <h1 className="flex text-black font-extrabold text-xl tracking-wider" >
+                <p className="text-body-green ">&lt;A</p>rindam<p className="text-body-green ">/&gt;</p>
               </h1>
             </div>
             <div className="flex">
@@ -53,12 +56,12 @@ const Navbar = () => {
                 {navlist.map((nav, index) => {
                   return (
                     <li
-                      className=" text-white text-lg font-fira px-4  hover:backdrop-blur-md cursor-pointer"
+                      className={`text-black text-base  px-4  hover:backdrop-blur-md cursor-pointer `}
                       key={index}
                     >
-                      <Link to={`${nav.to}`} 
-                      smooth={true}
-                      duration={500}
+                      <Link to={`${nav.to}`}
+                        smooth={true}
+                        duration={500}
                       >
                         {nav.label}
                       </Link>
@@ -73,9 +76,15 @@ const Navbar = () => {
                 {toggleIcon ? <HiX size={28} /> : <FaBars size={28} />}
               </div>
             </div>
-            <div className="bg-body-green text-white rounded-lg py-1 px-3">
-              Contact Me
-            </div>
+            <Link to='contact' 
+              smooth={true}
+              duration={1000}>
+              <div className="bg-body-green text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
+                Contact Me
+              </div>
+
+            </Link>
+
           </nav>
         </div>
 

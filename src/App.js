@@ -9,21 +9,35 @@ import CustomCursor from './Helper/CustomCursor';
 import Project from './container/Project';
 import Experience from './container/Experience';
 import { Element } from 'react-scroll';
+import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
 
   return (
     <div className="App overflow-x-hidden ">
+      <AnimatedCursor
+        innerSize={0}
+        outerSize={35}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={0}
+        outerStyle={{
+          border: '3px solid var(--cursor-color)'
+        }}
+        innerStyle={{
+          backgroundColor: 'var(--cursor-color)'
+        }}
+      />
       <Navbar />
       <SectionWatcher />
-      <Element name="home" id="home"  className="section">
+      <Element name="home" id="home" className="section">
         <Home />
       </Element>
       <Element name="about" id="about" className="section">
         <About />
       </Element>
       <Element name="experience" id="experience" className="section">
-        <Experience/>
+        <Experience />
       </Element>
       <Element name="projects" id="projects" className="section">
         <Project />
@@ -48,7 +62,7 @@ const SectionWatcher = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const sectionId = entry.target.id; 
+          const sectionId = entry.target.id;
           navigate(`/${sectionId}`);
         }
       });
