@@ -13,6 +13,10 @@ const navlist = [
     label: "About",
     to: "about"
   },
+  {
+    label: "Skills",
+    to: "skill"
+  },
   // {
   //   label: "Experience",
   //   to: "experinece"

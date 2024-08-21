@@ -10,6 +10,7 @@ import Project from './container/Project';
 import Experience from './container/Experience';
 import { Element } from 'react-scroll';
 import AnimatedCursor from 'react-animated-cursor';
+import Skills from './container/Skills';
 
 function App() {
 
@@ -36,8 +37,11 @@ function App() {
       <Element name="about" id="about" className="section">
         <About />
       </Element>
-      <Element name="experience" id="experience" className="section">
+      {/* <Element name="experience" id="experience" className="section">
         <Experience />
+      </Element> */}
+      <Element name="skills" id="skill" className="section">
+        <Skills />
       </Element>
       <Element name="projects" id="projects" className="section">
         <Project />
