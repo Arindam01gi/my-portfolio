@@ -37,12 +37,12 @@ function App() {
       <Element name="about" id="about" className="section">
         <About />
       </Element>
-      {/* <Element name="experience" id="experience" className="section">
-        <Experience />
-      </Element> */}
       <Element name="skills" id="skill" className="section">
         <Skills />
       </Element>
+      {/* <Element name="experience" id="experience" className="section">
+        <Experience />
+      </Element> */}
       <Element name="projects" id="projects" className="section">
         <Project />
       </Element>
