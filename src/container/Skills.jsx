@@ -2,10 +2,10 @@ import React from 'react'
 
 const Skills = () => {
   return (
-    <div className='bg-green-100  pt-8 flex justify-center items-center'>
+    <div className='bg-blue-200  pt-8 flex justify-center items-center'>
       <div className=' w-5/6'>
 
-        <h1 className='text-4xl font-extrabold text-body-green tracking-wide  ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Skills</h1>
+        <h1 className='text-4xl font-extrabold text-body-blue tracking-wide h-screen ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Skills</h1>
         {/* <div className='flex justify-between items-center'>
           <AnimatePresence>
             <FadeRight key="about-gif" duration={1.0} whileInView={true}>

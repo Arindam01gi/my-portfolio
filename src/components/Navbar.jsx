@@ -17,7 +17,7 @@ const navlist = [
     label: "Skills",
     to: "skill"
   },
-  
+
   {
     label: "Projects",
     to: "projects"
@@ -45,14 +45,14 @@ const Navbar = () => {
   return (
     <>
       <div className="flex justify-center">
-        <div className="p-3 backdrop-blur-md fixed w-5/6 top-8 border border-gray-300 rounded-lg z-10">
+        <div className=" fixed w-5/6 top-8 z-10">
           <nav className="navbar flex justify-between items-center ">
             <div className=" cursor-pointer ">
-              <h1 className="flex text-black font-extrabold text-xl tracking-wider" >
-                <p className="text-body-green ">&lt;A</p>rindam<p className="text-body-green ">/&gt;</p>
+              <h1 className="flex text-black font-extrabold text-2xl tracking-wider" >
+                <p className="text-body-blue ">&lt;A</p>rindam<p className="text-body-blue">/&gt;</p>
               </h1>
             </div>
-            <div className="flex">
+            <div className="flex  p-3 backdrop-blur-md rounded-lg">
               <ul className="flex md:visible invisible">
                 {navlist.map((nav, index) => {
                   return (
@@ -77,10 +77,10 @@ const Navbar = () => {
                 {toggleIcon ? <HiX size={28} /> : <FaBars size={28} />}
               </div>
             </div>
-            <Link to='contact' 
+            <Link to='contact'
               smooth={true}
               duration={1000}>
-              <div className="bg-body-green text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
+              <div className="bg-blue-500 text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
                 Contact Me
               </div>
 
