@@ -2,30 +2,45 @@ import React from 'react'
 
 const Skills = () => {
   return (
-    <div className='bg-blue-200  pt-8 flex justify-center items-center'>
-      <div className=' w-5/6'>
+    <div className='bg-blue-50  pt-8 flex justify-center items-center '>
+      <div className=' w-5/6 '>
 
-        <h1 className='text-4xl font-extrabold text-body-blue tracking-wide h-screen ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Skills</h1>
-        {/* <div className='flex justify-between items-center'>
-          <AnimatePresence>
-            <FadeRight key="about-gif" duration={1.0} whileInView={true}>
-              <div className=''>
-                <dotlottie-player src="https://lottie.host/8731c4fa-2e1b-496e-9cc6-83003b41a44d/jxxX5ihr2R.json" background="transparent" speed="1" style={{ width: '400px', height: '400px' }} loop autoplay></dotlottie-player>
-              </div>
-            </FadeRight>
+        <h1 className='text-4xl font-extrabold text-body-blue tracking-wide ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Skills</h1>
 
-            <FadeUp key='about-text' duration={0.8} whileInView={true}>
-              <div className='text-left mx-16 font-semibold '>
-                <h1 className='text-2xl text-left font-extrabold text-body-green tracking-tight'>
-                  Hello, I'm &lt;Arindam/&gt;
-                </h1>
-                <br />
-                Hi, I'm Arindam, a 24-year-old Web Developer based in Kolkata, India. I currently contribute my skills and expertise at Mindscale Infinity Solution. Previously, I had the opportunity to collaborate with talented individuals at MSQube Technology. My passion for JavaScript stems from its dynamic and unpredictable nature, much like life itself.Also, <strong>I know how to google things.</strong>
-              </div>
-            </FadeUp>
-          </AnimatePresence>
-        </div> */}
-
+        <div className='flex justify-center p-12 gap-10'>
+          <p>
+            <span className=''>
+              <img src="./icons/html.svg" alt="html" className='w-24 h-24 bg-[#f8eae7] p-6 rounded-full ' />
+            </span>
+            <p className='text-xs my-3 font-semibold'>
+              HTML5
+            </p>
+          </p>
+          <p>
+            <span className=''>
+              <img src="./icons/css.svg" alt="css" className='w-24 h-24 bg-[#cee8f5] p-6 rounded-full ' />
+            </span>
+            <p className='text-xs my-3 font-semibold'>
+              CSS
+            </p>
+          </p>
+          <p>
+            <span className=''>
+              <img src="./icons/javascript.svg" alt="javascript" className='w-24 h-24 bg-[#f7eeb9] p-6 rounded-full ' />
+            </span>
+            <p className='text-xs my-3 font-semibold'>
+              Javascript
+            </p>
+          </p>
+          <p>
+            <span className=''>
+              <img src="./icons/html.svg" alt="html" className='w-24 h-24 bg-[#f8eae7] p-6 rounded-full ' />
+            </span>
+            <p className='text-xs my-3 font-semibold'>
+              HTML5
+            </p>
+          </p>
+        </div>
 
       </div>
 

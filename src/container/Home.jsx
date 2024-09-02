@@ -3,15 +3,17 @@ import About from "./About";
 import Navbar from "../components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import FadeUp from "../utils/FadeUp";
+import FadeRight from "../utils/FadeRight";
+import PopUp from "../utils/PopUp";
 
 
 const Home = () => {
   return (
 
-    <div className=" h-screen bg-blue-200 flex justify-center items-center ">
+    <div className=" h-screen bg-blue-50 flex justify-center items-center ">
       <div className=" w-5/6  h-full flex items-center">
         <AnimatePresence>
-          <FadeUp key="hero-image" duration={0.8} whileInView={true}>
+          <PopUp key="hero-image" duration={0.5} whileInView={true}>
           <div className="text-left w-3/4 ">
               <div className="text-7xl text-body-blue font-bold tracking-wider">
                 Arindam Maiti
@@ -23,7 +25,7 @@ const Home = () => {
                 <span className="text-body-blue text-2xl">Hi</span>, I'm <span className="text-body-blue">Arindam</span>, I craft dreams into digital reality with code and design.
               </p>
             </div>
-          </FadeUp>
+          </PopUp>
 
           <div>
           <img src="./assets/avatar3.jpeg" alt="avatar" className='w-[400px]  rounded-full' />

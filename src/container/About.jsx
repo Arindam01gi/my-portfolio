@@ -2,6 +2,7 @@ import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 import FadeRight from '../utils/FadeRight'
 import FadeUp from '../utils/FadeUp'
+import PopUp from '../utils/PopUp'
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
             </div>
             {/* </FadeRight> */}
 
-            <FadeUp key='about-text' duration={0.8} whileInView={true}>
+            <PopUp key='about-text' duration={0.5} whileInView={true}>
               <div className='text-left mx-16 font-semibold '>
                 <h1 className='text-2xl text-left font-extrabold text-body-blue tracking-tight'>
                   Hello, I'm &lt;Arindam/&gt;
@@ -29,7 +30,7 @@ const About = () => {
                 <br />
                 Hi, I'm Arindam, a 24-year-old Web Developer based in Kolkata, India. I currently contribute my skills and expertise at Mindscale Infinity Solution. Previously, I had the opportunity to collaborate with talented individuals at MSQube Technology. My passion for JavaScript stems from its dynamic and unpredictable nature, much like life itself.Also, <strong>I know how to google things.</strong>
               </div>
-            </FadeUp>
+            </PopUp>
           </AnimatePresence>
         </div>
 
