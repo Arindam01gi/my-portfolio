@@ -1,6 +1,21 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
+const ProjectCardContent = [
+  {
+    "name": "Swiggy Clone",
+    "video": "/video/swiggy-clone.mp4",
+    "description": "Swiggy-inspired food delivery app with restaurant browsing, cart management, and responsive UI. Built with React, Redux, and Tailwind CSS.",
+    "link" : "https://remarkable-tapioca-376a9f.netlify.app/"
+  },
+  {
+    "name": "CloneTube",
+    "video": "/video/youtube-clone.mp4",
+    "description": "YouTube-inspired video streaming app with video playback, search, and responsive UI. Built with React, Redux, and Tailwind CSS.",
+    "link" : "https://clonetube-seven.vercel.app/"
+  }
+]
+
 const Project = () => {
   return (
     <div className='pt-8 flex justify-center items-center bg-blue-100 py-8'>
@@ -24,10 +39,13 @@ const Project = () => {
         </div>
 
         <div className='flex justify-evenly  flex-wrap'>
-            <ProjectCard/>
-            <ProjectCard/>
-            <ProjectCard/>
-            <ProjectCard/>
+          {
+            ProjectCardContent.map((item,index) => (
+              <ProjectCard key={index} name ={item.name} video={item.video} description={item.description} link={item.link}/>
+            ))
+          }
+
+            
         </div>
 
 
