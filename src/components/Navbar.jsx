@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FaReact, FaBars, FaBold } from "react-icons/fa";
-import { CiMenuBurger } from "react-icons/ci";
+import {  FaBars} from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
 

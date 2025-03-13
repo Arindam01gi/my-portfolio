@@ -1,9 +1,5 @@
 import React from "react";
-import About from "./About";
-import Navbar from "../components/Navbar";
 import { AnimatePresence } from "framer-motion";
-import FadeUp from "../utils/FadeUp";
-import FadeRight from "../utils/FadeRight";
 import PopUp from "../utils/PopUp";
 
 

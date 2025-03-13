@@ -1,7 +1,5 @@
 import React from 'react'
 import { AnimatePresence } from 'framer-motion'
-import FadeRight from '../utils/FadeRight'
-import FadeUp from '../utils/FadeUp'
 import PopUp from '../utils/PopUp'
 
 const About = () => {
