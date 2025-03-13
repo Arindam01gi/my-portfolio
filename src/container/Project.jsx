@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
 import PopUp from '../utils/PopUp'
 
@@ -18,6 +18,8 @@ const ProjectCardContent = [
 ]
 
 const Project = () => {
+  const [filter, setFilter] = useState('all')
+
   return (
     <div className='pt-8 flex justify-center items-center bg-blue-50 py-8'>
       <div className='w-5/6 '>
@@ -25,36 +27,35 @@ const Project = () => {
         <h1 className='text-4xl font-extrabold text-body-blue tracking-wide' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Projects</h1>
 
         <div className='py-6 flex justify-center gap-6'>
-          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer'>
+          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer' onClick={() => setFilter('all')}>
             All
           </div>
-          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer'>
+          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer' onClick={() => setFilter('frontend')}>
             Frontend
           </div>
-          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer'>
+          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer' onClick={() => setFilter('backend')}>
             Backend
           </div>
-          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer'>
+          <div className='py-2 px-5 shadow-lg rounded-lg bg-white cursor-pointer' onClick={() => setFilter('fullstack')}>
             FullStack
           </div>
         </div>
 
         <PopUp>
-          <div className='flex justify-evenly  flex-wrap'>
-            {
+          <div className='flex justify-evenly flex-wrap'>
+            {filter === 'backend' || filter === 'fullstack' ? (
+              <div className="text-2xl font-bold text-gray-500 p-8">
+                Coming Soon!
+              </div>
+            ) : (
               ProjectCardContent.map((item, index) => (
                 <ProjectCard key={index} name={item.name} video={item.video} description={item.description} link={item.link} />
               ))
-            }
+            )}
           </div>
-
         </PopUp>
 
-
-
-
       </div>
-
     </div>
   )
 }

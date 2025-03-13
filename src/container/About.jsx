@@ -27,7 +27,7 @@ const About = () => {
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl font-extrabold text-body-blue tracking-tight'>
                   Hello, I'm &lt;Arindam/&gt;
                 </h1>
-                <p className='text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700'>
+                <p className='text-base sm:text-lg lg:text-lg leading-relaxed text-gray-700'>
                   Hi, I'm Arindam, a 24-year-old Web Developer based in Kolkata, India. I currently contribute my skills and expertise at Mindscale Infinity Solution. Previously, I had the opportunity to collaborate with talented individuals at MSQube Technology. My passion for JavaScript stems from its dynamic and unpredictable nature, much like life itself. Also, <strong className="font-bold">I know how to google things.</strong>
                 </p>
               </div>

@@ -61,6 +61,9 @@ const Contact = () => {
           </div>
 
         </PopUp>
+        <div className="text-center mt-8 text-gray-600">
+          &copy; {new Date().getFullYear()} Arindam Maiti. All rights reserved.
+        </div>
       </div>
     </div>
   );

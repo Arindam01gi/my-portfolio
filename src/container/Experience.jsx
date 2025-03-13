@@ -6,16 +6,16 @@ import PopUp from '../utils/PopUp';
 const experiences = [
   {
     company: "Mindscale Infinity Solution",
-    role: "Senior Web Developer",
+    role: "Senior Developer",
     duration: "Aug,2023 - Present",
-    description: "Developing scalable web applications using modern technologies like React, Node.js, and MongoDB.",
+    description: "Leading the development of scalable web applications using React, Node.js, and MongoDB. Architecting robust backend systems, optimizing database performance, and implementing RESTful APIs. Mentoring junior developers and ensuring code quality through code reviews and best practices.",
     icon: <FaCode />
   },
   {
     company: "MSQube Technology",
     role: "Backend Django Developer",
     duration: "Feb,2023 - Aug,2023",
-    description: "Built responsive user interfaces and collaborated with design teams to implement pixel-perfect designs.",
+    description: "Developed and maintained backend systems using Django and Django REST Framework. Designed and implemented database schemas, optimized queries, and built REST APIs for various web applications. Collaborated with frontend teams to ensure seamless integration between backend and frontend systems.",
     icon: <FaBriefcase />
   }
 ];
@@ -60,7 +60,7 @@ const Experience = () => {
                 <h4 className="vertical-timeline-element-subtitle text-lg font-semibold text-gray-700 mb-2">
                   {exp.role}
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-left">
                   {exp.description}
                 </p>
               </VerticalTimelineElement>

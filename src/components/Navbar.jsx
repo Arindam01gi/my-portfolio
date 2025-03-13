@@ -36,6 +36,15 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selected, setSelected] = useState('home');
 
+  const handleSetActive = (to) => {
+    setSelected(to);
+  };
+
+  const handleClick = (to) => {
+    setSelected(to);
+    setIsMenuOpen(false);
+  };
+
   const handleToggleIcon = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -59,7 +68,6 @@ const Navbar = () => {
                         selected === nav.to ? 'font-semibold' : ''
                       }`}
                       key={index}
-                      onClick={() => setSelected(nav.to)}
                     >
                       <Link 
                         to={nav.to}
@@ -67,6 +75,7 @@ const Navbar = () => {
                         duration={500}
                         spy={true}
                         activeClass="active"
+                        onSetActive={handleSetActive}
                       >
                         {nav.label}
                       </Link>
@@ -96,47 +105,44 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed top-20 w-full z-10">
-          <div className="w-5/6 mx-auto backdrop-blur-md rounded-lg shadow-lg">
-            <ul className="flex flex-col p-4">
-              {navlist.map((nav, index) => (
-                <li
-                  className={`text-black text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${
-                    selected === nav.to ? 'font-semibold' : ''
-                  }`}
-                  key={index}
-                  onClick={() => {
-                    setSelected(nav.to);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  <Link 
-                    to={nav.to}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    activeClass="active"
-                  >
-                    {nav.label}
-                  </Link>
-                </li>
-              ))}
-              <li className="px-4 py-2">
+      <div className={`md:hidden fixed top-20 w-full z-10 transition-all duration-700 ease-in-out ${
+        isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20 pointer-events-none'
+      }`}>
+        <div className="w-4/5 mx-auto backdrop-blur-md rounded-lg shadow-lg">
+          <ul className="flex flex-col p-4">
+            {navlist.map((nav, index) => (
+              <li
+                className={`text-black text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${
+                  selected === nav.to ? 'font-semibold' : ''
+                }`}
+                key={index}
+                onClick={() => handleClick(nav.to)}
+              >
                 <Link 
-                  to='contact'
+                  to={nav.to}
                   smooth={true}
-                  duration={1000}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
                 >
-                  <div className="bg-blue-500 text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
-                    Contact Me
-                  </div>
+                  {nav.label}
                 </Link>
               </li>
-            </ul>
-          </div>
+            ))}
+            <li className="px-4 py-2">
+              <Link 
+                to='contact'
+                smooth={true}
+                duration={1000}
+              >
+                <div className="bg-blue-500 text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
+                  Contact Me
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
-      )}
+      </div>
     </>
   );
 };
