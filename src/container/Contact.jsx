@@ -5,7 +5,7 @@ import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
-    <div className="pt-8 flex justify-center items-center bg-blue-50 py-8 min-h-screen">
+    <div className="pt-8 flex justify-center items-center bg-blue-100 py-8 min-h-screen">
       <div className="w-5/6">
         <h1 className="text-4xl font-extrabold text-body-blue tracking-wide mb-8" 
             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>

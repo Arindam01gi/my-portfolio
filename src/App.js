@@ -40,9 +40,9 @@ function App() {
       <Element name="skills" id="skill" className="section">
         <Skills />
       </Element>
-      {/* <Element name="experience" id="experience" className="section">
+      <Element name="experience" id="experience" className="section">
         <Experience />
-      </Element> */}
+      </Element>
       <Element name="projects" id="projects" className="section">
         <Project />
       </Element>

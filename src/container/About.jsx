@@ -6,35 +6,34 @@ import PopUp from '../utils/PopUp'
 
 const About = () => {
   return (
-    <div className="bg-blue-100  pt-8 flex justify-center items-center ">
-      <div className=' w-5/6'>
-
-        <h1 className='text-4xl font-extrabold text-body-blue tracking-wide  ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>About</h1>
-        <div className='flex justify-center items-center'>
+    <div className="bg-blue-100 py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-extrabold text-body-blue tracking-wide mb-8' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>About</h1>
+        <div className='flex flex-col lg:flex-row items-center gap-8 xl:gap-12'>
           <AnimatePresence>
-            {/* <FadeRight key="about-gif" duration={1.0} whileInView={true}> */}
-            <div className='py-4 '>
-              {/* <dotlottie-player src="https://lottie.host/8731c4fa-2e1b-496e-9cc6-83003b41a44d/jxxX5ihr2R.json" background="transparent" speed="1" style={{ width: '400px', height: '400px',objectFit:'cover' }} loop autoplay></dotlottie-player> */}
-
-              {/* <img src="./assets/avatar3.jpeg" alt="avatar" className='w-[90%]  rounded-full' /> */}
-
-              <dotlottie-player src="https://lottie.host/2e3c042b-7a9d-431b-ac25-b2747991ec67/rMhx5wCDhB.json" background="transparent" speed="1" style={{ width: '400px', height: '400px',objectFit:'cover' }} loop autoplay></dotlottie-player>
+            <div className='w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px]'>
+              <dotlottie-player 
+                src="https://lottie.host/2e3c042b-7a9d-431b-ac25-b2747991ec67/rMhx5wCDhB.json" 
+                background="transparent" 
+                speed="1" 
+                style={{ width: '100%', height: 'auto', aspectRatio: '1/1' }} 
+                loop 
+                autoplay>
+              </dotlottie-player>
             </div>
-            {/* </FadeRight> */}
 
             <PopUp key='about-text' duration={0.5} whileInView={true}>
-              <div className='text-left mx-16 font-semibold '>
-                <h1 className='text-2xl text-left font-extrabold text-body-blue tracking-tight'>
+              <div className='w-full lg:w-auto text-left space-y-4 sm:space-y-6'>
+                <h1 className='text-2xl sm:text-3xl lg:text-4xl font-extrabold text-body-blue tracking-tight'>
                   Hello, I'm &lt;Arindam/&gt;
                 </h1>
-                <br />
-                Hi, I'm Arindam, a 24-year-old Web Developer based in Kolkata, India. I currently contribute my skills and expertise at Mindscale Infinity Solution. Previously, I had the opportunity to collaborate with talented individuals at MSQube Technology. My passion for JavaScript stems from its dynamic and unpredictable nature, much like life itself.Also, <strong>I know how to google things.</strong>
+                <p className='text-base sm:text-lg lg:text-xl leading-relaxed text-gray-700'>
+                  Hi, I'm Arindam, a 24-year-old Web Developer based in Kolkata, India. I currently contribute my skills and expertise at Mindscale Infinity Solution. Previously, I had the opportunity to collaborate with talented individuals at MSQube Technology. My passion for JavaScript stems from its dynamic and unpredictable nature, much like life itself. Also, <strong className="font-bold">I know how to google things.</strong>
+                </p>
               </div>
             </PopUp>
           </AnimatePresence>
         </div>
-
-
       </div>
     </div>
   )
