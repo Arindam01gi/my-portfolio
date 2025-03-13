@@ -53,7 +53,7 @@ const Navbar = () => {
       <div className="flex justify-center">
         <div className="fixed w-5/6 top-8 z-10">
           <nav className="navbar flex justify-between items-center">
-            <div className="cursor-pointer">
+            <div className="cursor-pointer backdrop-blur-md px-4 py-2 rounded-lg">
               <h1 className="flex text-black font-extrabold text-2xl tracking-wider">
                 <p className="text-body-blue">&lt;A</p>rindam<p className="text-body-blue">/&gt;</p>
               </h1>
