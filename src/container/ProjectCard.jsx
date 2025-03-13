@@ -19,7 +19,7 @@ const ProjectCard = ({name , video ,description, link}) => {
 
   return (
     <div 
-      className='relative w-96 h-[400px] shadow-lg bg-white rounded-lg my-6 overflow-hidden group'
+      className='relative w-[500px] h-[400px] shadow-lg bg-white rounded-lg my-6 overflow-hidden group'
       onMouseMove={handleMouseMove}
     >
       {/* Transparent ring effect on hover */}
