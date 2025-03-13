@@ -1,11 +1,10 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Home from './container/Home';
 import About from './container/About'
 import Contact from './container/Contact';
 import Navbar from './components/Navbar';
-import CustomCursor from './Helper/CustomCursor';
 import Project from './container/Project';
 import Experience from './container/Experience';
 import { Element } from 'react-scroll';
