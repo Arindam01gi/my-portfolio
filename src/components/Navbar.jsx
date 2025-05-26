@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  FaBars} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
 
@@ -63,12 +63,11 @@ const Navbar = () => {
                 {navlist.map((nav, index) => {
                   return (
                     <li
-                      className={`text-black text-base px-4 hover:backdrop-blur-md cursor-pointer ${
-                        selected === nav.to ? 'font-semibold' : ''
-                      }`}
+                      className={`text-black text-base px-4 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
+                        }`}
                       key={index}
                     >
-                      <Link 
+                      <Link
                         to={nav.to}
                         smooth={true}
                         duration={500}
@@ -89,7 +88,7 @@ const Navbar = () => {
                 {isMenuOpen ? <HiX size={28} /> : <FaBars size={28} />}
               </div>
             </div>
-            <Link 
+            <Link
               to='contact'
               smooth={true}
               duration={1000}
@@ -104,20 +103,18 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-20 w-full z-10 transition-all duration-700 ease-in-out ${
-        isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20 pointer-events-none'
-      }`}>
+      <div className={`md:hidden fixed top-20 w-full z-10 transition-all duration-700 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20 pointer-events-none'
+        }`}>
         <div className="w-4/5 mx-auto backdrop-blur-md rounded-lg shadow-lg">
           <ul className="flex flex-col p-4">
             {navlist.map((nav, index) => (
               <li
-                className={`text-black text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${
-                  selected === nav.to ? 'font-semibold' : ''
-                }`}
+                className={`text-black text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
+                  }`}
                 key={index}
                 onClick={() => handleClick(nav.to)}
               >
-                <Link 
+                <Link
                   to={nav.to}
                   smooth={true}
                   duration={500}
@@ -129,12 +126,13 @@ const Navbar = () => {
               </li>
             ))}
             <li className="px-4 py-2">
-              <Link 
+              <Link
                 to='contact'
                 smooth={true}
                 duration={1000}
               >
-                <div className="bg-blue-500 text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
+                <div
+                  className="bg-blue-500 text-white rounded-lg py-1 px-3 text-base cursor-pointer box-shadow">
                   Contact Me
                 </div>
               </Link>
