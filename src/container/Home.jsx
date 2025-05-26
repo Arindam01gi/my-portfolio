@@ -20,6 +20,14 @@ const Home = () => {
                 <span className="text-body-blue text-xl md:text-2xl">Hi</span>, I'm <span className="text-body-blue">Arindam</span>, I craft dreams into digital reality with code and design.
               </p>
             </div>
+            <a
+                href="https://drive.google.com/file/d/1_W_jo4p9-G_GrATYe7hQyXkpBHBWXvp3/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-xl box-shadow cursor-pointer"
+              >
+                Check Resume
+              </a>
           </PopUp>
 
           <div className="mt-8 md:mt-0">
