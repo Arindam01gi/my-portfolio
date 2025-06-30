@@ -22,14 +22,16 @@ const ProjectCard = ({name , video ,description, link}) => {
       className='relative w-[500px] h-[400px] shadow-lg bg-white rounded-lg my-6 overflow-hidden group'
       onMouseMove={handleMouseMove}
     >
-      {/* Transparent ring effect on hover */}
+      {/* Bluish glow effect on hover */}
       <div
-        className="absolute border-2 border-blue-500 rounded-full pointer-events-none transition-transform duration-500 transform scale-0 group-hover:scale-100"
+        className="absolute rounded-full pointer-events-none transition-transform duration-500 transform scale-0 group-hover:scale-100"
         style={{
           top: `${hoverPosition.y}px`,
           left: `${hoverPosition.x}px`,
-          width: '150px',
-          height: '150px',
+          width: '15rem',
+          height: '15rem',
+          backgroundColor: 'rgba(66, 153, 225, 0.2)',
+          filter: 'blur(48px)',
           transform: 'translate(-50%, -50%)',
         }}
       ></div>
