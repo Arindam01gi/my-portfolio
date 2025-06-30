@@ -8,26 +8,14 @@ import Navbar from './components/Navbar';
 import Project from './container/Project';
 import Experience from './container/Experience';
 import { Element } from 'react-scroll';
-import AnimatedCursor from 'react-animated-cursor';
 import Skills from './container/Skills';
+import CustomCursor from './Helper/CustomCursor';
 
 function App() {
 
   return (
     <div className="App overflow-x-hidden ">
-      <AnimatedCursor
-        innerSize={0}
-        outerSize={35}
-        innerScale={1}
-        outerScale={1.7}
-        outerAlpha={0}
-        outerStyle={{
-          border: '3px solid var(--cursor-color)'
-        }}
-        innerStyle={{
-          backgroundColor: 'var(--cursor-color)'
-        }}
-      />
+      <CustomCursor />
       <Navbar />
       <SectionWatcher />
       <Element name="home" id="home" className="section">
