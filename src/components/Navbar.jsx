@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const navlist = [
   {
@@ -34,6 +37,7 @@ const navlist = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selected, setSelected] = useState('home');
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const handleSetActive = (to) => {
     setSelected(to);
@@ -55,11 +59,11 @@ const Navbar = () => {
           <nav className="navbar flex justify-between items-center">
             <div className="cursor-pointer backdrop-blur-md px-4 py-2 rounded-lg">
               <h1 className="flex text-black font-extrabold text-2xl tracking-wider">
-                <p className="text-body-blue">&lt;A</p>rindam<p className="text-body-blue">/&gt;</p>
+                <p className="text-body-blue">{'<A'}</p>rindam<p className="text-body-blue">{'/>'}</p>
               </h1>
             </div>
             <div className="flex p-3 backdrop-blur-md rounded-lg">
-              <ul className="hidden md:flex">
+              <ul className="hidden md:flex items-center">
                 {navlist.map((nav, index) => {
                   return (
                     <li
@@ -80,6 +84,9 @@ const Navbar = () => {
                     </li>
                   );
                 })}
+                <li className="px-4 py-2 cursor-pointer text-black dark:text-white" onClick={toggleTheme}>
+                  {theme === 'dark' ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
+                </li>
               </ul>
               <div
                 className="md:hidden text-body-blue font-bold"
@@ -125,6 +132,10 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li className="px-4 py-2 cursor-pointer flex items-center text-black dark:text-white" onClick={toggleTheme}>
+              {theme === 'dark' ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
+              <span className="ml-2">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+            </li>
             <li className="px-4 py-2">
               <Link
                 to='contact'

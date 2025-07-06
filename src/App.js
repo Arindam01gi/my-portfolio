@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Home from './container/Home';
 import About from './container/About'
@@ -10,8 +10,18 @@ import Experience from './container/Experience';
 import { Element } from 'react-scroll';
 import Skills from './container/Skills';
 import CustomCursor from './Helper/CustomCursor';
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   return (
     <div className="App overflow-x-hidden ">

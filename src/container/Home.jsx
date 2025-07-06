@@ -5,7 +5,7 @@ import PopUp from "../utils/PopUp";
 
 const Home = () => {
   return (
-    <div className="h-screen bg-blue-50 flex justify-center items-center">
+    <div className="h-screen bg-blue-50 dark:bg-gray-900 flex justify-center items-center">
       <div className="w-full md:w-5/6 h-full flex flex-col md:flex-row items-center justify-center p-4">
         <AnimatePresence>
           <PopUp key="hero-image" duration={0.5} whileInView={true}>
@@ -13,10 +13,10 @@ const Home = () => {
               <div className="text-4xl md:text-7xl text-body-blue font-bold tracking-wider">
                 Arindam Maiti
               </div>
-              <p className="text-xl md:text-3xl mt-3 font-semibold">
+              <p className="text-xl md:text-3xl mt-3 font-semibold text-black dark:text-white">
                 Full Stack Dev, Freelancer & OpenSource Contributer
               </p>
-              <p className="text-base md:text-xl mt-6 md:mt-10 w-full md:w-5/6 tracking-wider font-semibold text-gray-500">
+              <p className="text-base md:text-xl mt-6 md:mt-10 w-full md:w-5/6 tracking-wider font-semibold text-gray-500 dark:text-gray-300">
                 <span className="text-body-blue text-xl md:text-2xl">Hi</span>, I'm <span className="text-body-blue">Arindam</span>, I craft dreams into digital reality with code and design.
               </p>
               <motion.button
