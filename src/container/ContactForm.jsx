@@ -24,7 +24,7 @@ const ContactForm = () => {
 
     
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg">
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold text-body-blue mb-6">Send Message</h2>
             <form className="space-y-6" ref={form} onSubmit={sendEmail}>
               <div>
@@ -33,7 +33,7 @@ const ContactForm = () => {
                   type="text"
                   id="name"
                   name="user_name"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-black dark:text-white dark:placeholder-gray-400"
                   placeholder="Your Name"
                 />
               </div>
@@ -44,7 +44,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="user_email"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-black dark:text-white dark:placeholder-gray-400"
                   placeholder="your@email.com"
                 />
               </div>
@@ -55,7 +55,7 @@ const ContactForm = () => {
                   id="message"
                   name="message"
                   rows="4"
-                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-black dark:text-white dark:placeholder-gray-400"
                   placeholder="Your message..."
                 ></textarea>
               </div>

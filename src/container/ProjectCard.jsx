@@ -19,7 +19,7 @@ const ProjectCard = ({name , video ,description, link}) => {
 
   return (
     <div 
-      className='relative w-[500px] h-[400px] shadow-lg bg-white rounded-lg my-6 overflow-hidden group'
+      className='relative w-[500px] h-[400px] shadow-lg bg-white dark:bg-gray-800 rounded-lg my-6 overflow-hidden group'
       onMouseMove={handleMouseMove}
     >
       {/* Bluish glow effect on hover */}
@@ -38,8 +38,8 @@ const ProjectCard = ({name , video ,description, link}) => {
 
       {/* Text Section */}
       <div className="p-4">
-        <h3 className='text-lg font-semibold mb-4 text-center'>{name }</h3>
-        <p className='text-sm text-gray-600 text-center'>
+        <h3 className='text-lg font-semibold mb-4 text-center text-black dark:text-white'>{name }</h3>
+        <p className='text-sm text-gray-600 dark:text-gray-300 text-center'>
           {description}
         </p>
       </div>
@@ -54,10 +54,10 @@ const ProjectCard = ({name , video ,description, link}) => {
       </div>
 
       {/* Video Section */}
-      <div className="relative">
+      <div className="relative  px-5 ">
         <video 
           src={video} 
-          className="w-full h-40 object-cover rounded-b-lg"
+          className="w-full object-cover rounded-b-lg"
           autoPlay 
           loop 
           muted 
