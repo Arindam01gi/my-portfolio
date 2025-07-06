@@ -14,7 +14,13 @@ const ProjectCardContent = [
     "video": "/video/youtube-clone.mp4",
     "description": "YouTube-inspired video streaming app with video playback, search, and responsive UI. Built with React, Redux, and Tailwind CSS.",
     "link": "https://clonetube-seven.vercel.app/"
-  }
+  },
+  // {
+  //   "name": "Portfolio",
+  //   "video": "/video/youtube-clone.mp4",
+  //   "description": "",
+  //   "link": "https://clonetube-seven.vercel.app/"
+  // }
 ]
 
 const Project = () => {

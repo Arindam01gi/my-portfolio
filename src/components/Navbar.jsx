@@ -58,16 +58,16 @@ const Navbar = () => {
         <div className="fixed w-5/6 top-8 z-10">
           <nav className="navbar flex justify-between items-center">
             <div className="cursor-pointer backdrop-blur-md px-4 py-2 rounded-lg">
-              <h1 className="flex text-black font-extrabold text-2xl tracking-wider">
+              <h1 className="flex text-black dark:text-white font-extrabold text-2xl tracking-wider">
                 <p className="text-body-blue">{'<A'}</p>rindam<p className="text-body-blue">{'/>'}</p>
               </h1>
             </div>
-            <div className="flex p-3 backdrop-blur-md rounded-lg">
+            <div className="flex p-3 backdrop-blur-md rounded-lg dark:text-white">
               <ul className="hidden md:flex items-center">
                 {navlist.map((nav, index) => {
                   return (
                     <li
-                      className={`text-black text-base px-4 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
+                      className={`text-black dark:text-white text-base px-4 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
                         }`}
                       key={index}
                     >
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </li>
               </ul>
               <div
-                className="md:hidden text-body-blue font-bold"
+                className="md:hidden text-body-blue font-bold dark:text-blue-400 cursor-pointer"
                 onClick={handleToggleIcon}
               >
                 {isMenuOpen ? <HiX size={28} /> : <FaBars size={28} />}
@@ -116,7 +116,7 @@ const Navbar = () => {
           <ul className="flex flex-col p-4">
             {navlist.map((nav, index) => (
               <li
-                className={`text-black text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
+                className={`text-black dark:text-white text-base px-4 py-2 hover:backdrop-blur-md cursor-pointer ${selected === nav.to ? 'font-semibold' : ''
                   }`}
                 key={index}
                 onClick={() => handleClick(nav.to)}
@@ -132,9 +132,9 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="px-4 py-2 cursor-pointer flex items-center text-black dark:text-white" onClick={toggleTheme}>
+            <li className="px-4 py-2 cursor-pointer flex justify-center items-center text-black dark:text-white" onClick={toggleTheme}>
               {theme === 'dark' ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
-              <span className="ml-2">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+              <span className="ml-2 dark:text-white">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
             </li>
             <li className="px-4 py-2">
               <Link
