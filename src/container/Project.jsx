@@ -29,11 +29,11 @@ const ProjectCardContent = [
   },
   {
     "name": "Resolveby",
-    "video": "/video/portfolio.webm",
-    "description": "Discover my portfolio, a curated collection of my best work. From innovative projects to creative solutions, see how I turn concepts into reality. Check out my portfolio here and let's create something amazing together.",
-    "link": "https://arindam1-portfolio.netlify.app/",
-    tech: ["React", "Redux", "Tailwind CSS", "vercel", "Framer motion"],
-    codeLink: "https://github.com/Arindam01gi/my-portfolio"
+    "video": "/video/resolveby.webm",
+    "description": "ResolveBy's website is a strategic asset driving business growth and customer trust by efficiently addressing software-related issues",
+    "link": "https://resolveby.com/",
+    tech: ["React", "Redux", "Tailwind CSS", "vercel", "Framer motion","GSAP"],
+    // codeLink: "https://github.com/Arindam01gi/my-portfolio"
   },
 ]
 
@@ -62,7 +62,7 @@ const Project = () => {
         </div>
 
         <PopUp>
-          <div className='flex justify-evenly flex-wrap gap-6'>
+          <div className='flex justify-center flex-wrap gap-6'>
             {filter === 'backend' || filter === 'fullstack' ? (
               <div className="text-2xl font-bold text-gray-500 dark:text-gray-300 p-8">
                 Coming Soon!

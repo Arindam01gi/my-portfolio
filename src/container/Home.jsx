@@ -5,11 +5,11 @@ import PopUp from "../utils/PopUp";
 
 const Home = () => {
   return (
-    <div className="h-screen bg-blue-50 dark:bg-gray-900 flex justify-center items-center">
-      <div className="w-full md:w-5/6 h-full flex flex-col md:flex-row items-center justify-center p-4">
+    <div className="h-screen bg-blue-50 dark:bg-gray-900 flex justify-center items-center ">
+      <div className="w-full md:w-5/6 h-full flex flex-col md:flex-row items-center justify-between p-4 ">
         <AnimatePresence>
           <PopUp key="hero-image" duration={0.5} whileInView={true}>
-            <div className="text-left w-full md:w-3/4">
+            <div className="text-left w-full md:w-3/4 ">
               <div className="text-4xl md:text-7xl text-body-blue font-bold tracking-wider">
                 Arindam Maiti
               </div>

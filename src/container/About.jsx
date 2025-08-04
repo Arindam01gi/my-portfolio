@@ -5,9 +5,9 @@ import PopUp from '../utils/PopUp'
 const About = () => {
   return (
     <div className="bg-blue-100 dark:bg-gray-900 py-8 md:py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-9xl ">
         <h1 className='text-3xl sm:text-4xl lg:text-5xl font-extrabold text-body-blue tracking-wide mb-8' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>About</h1>
-        <div className='flex flex-col lg:flex-row items-center gap-8 xl:gap-12'>
+        <div className='flex flex-col lg:flex-row items-center gap-8 xl:gap-12 justify-between'>
           <AnimatePresence>
             <div className='w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px]'>
               <dotlottie-player 
@@ -21,7 +21,7 @@ const About = () => {
             </div>
 
             <PopUp key='about-text' duration={0.5} whileInView={true}>
-              <div className='w-full lg:w-auto text-left space-y-4 sm:space-y-6'>
+              <div className='w-full lg:w-[70%] text-left space-y-4 sm:space-y-6 ml-0 lg:ml-20'>
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl font-extrabold text-body-blue tracking-tight'>
                   Hello, I'm &lt;Arindam/&gt;
                 </h1>
