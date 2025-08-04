@@ -20,7 +20,7 @@ const Home = () => {
                 <span className="text-body-blue text-xl md:text-2xl">Hi</span>, I'm <span className="text-body-blue">Arindam</span>, I craft dreams into digital reality with code and design.
               </p>
               <motion.button
-                onClick={() => window.open("https://drive.google.com/file/d/1_W_jo4p9-G_GrATYe7hQyXkpBHBWXvp3/view?usp=sharing", "_blank")}
+                onClick={() => window.open("https://drive.google.com/file/d/1M6qucIlBJ8CA72FA7MUoRpjqiqNEwgyy/view?usp=sharing", "_blank")}
                 whileHover={{ scale: 1.2 }}
                 onHoverStart={event => {}}
                 onHoverEnd={event => {}}
