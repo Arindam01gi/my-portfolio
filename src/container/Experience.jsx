@@ -1,6 +1,6 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaBriefcase, FaCode } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
 import PopUp from '../utils/PopUp';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
