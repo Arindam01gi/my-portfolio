@@ -7,9 +7,16 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const experiences = [
   {
+    company: "Webskitters Technology Solutions Private Limited",
+    role: "Software Engineer - Nextjs",
+    duration: "Feb,2026 - Present",
+    description: "Software Engineer at Webskitters, architecting VidyaLabh, an end-to-end AI-driven e-learning platform featuring automated LLM curriculum models and multi-role dashboards. Optimized client-side caching with TanStack Query to cut API overhead by 40%, and engineered HLS/WebRTC streaming for sub-500ms video latency.",
+    icon: <FaCode />
+  },
+  {
     company: "Mindscale Infinity Solution",
     role: "Senior Developer",
-    duration: "Aug,2023 - Present",
+    duration: "Aug,2023 - Feb,2026",
     description: "Leading the development of scalable web applications using React, Node.js, and MongoDB. Architecting robust backend systems, optimizing database performance, and implementing RESTful APIs. Mentoring junior developers and ensuring code quality through code reviews and best practices.",
     icon: <FaCode />
   },
@@ -18,7 +25,7 @@ const experiences = [
     role: "Backend Django Developer",
     duration: "Feb,2023 - Aug,2023",
     description: "Developed and maintained backend systems using Django and Django REST Framework. Designed and implemented database schemas, optimized queries, and built REST APIs for various web applications. Collaborated with frontend teams to ensure seamless integration between backend and frontend systems.",
-    icon: <FaBriefcase />
+    icon: <FaCode />
   }
 ];
 
