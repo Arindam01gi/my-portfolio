@@ -1,84 +1,80 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-const ProjectCard = ({ name, video, description, link, codeLink, tech}) => {
-  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setHoverPosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
+const ProjectCard = ({ name, video, description, link, codeLink, tech }) => {
   const openInNewTab = (url) => window.open(url, '_blank');
 
   return (
-    <div
-      className="relative w-[500px] h-[500px] shadow-2xl bg-white dark:bg-gray-900 rounded-2xl overflow-hidden group transition-transform hover:scale-[1.015] duration-300"
-      onMouseMove={handleMouseMove}
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      whileHover={{ y: -12 }}
+      className="relative group bg-white dark:bg-gray-900 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-800 flex flex-col h-full"
     >
-      {/* Glow Effect */}
-      <div
-        className="absolute rounded-full pointer-events-none transition-transform duration-500 transform scale-0 group-hover:scale-100"
-        style={{
-          top: `${hoverPosition.y}px`,
-          left: `${hoverPosition.x}px`,
-          width: '14rem',
-          height: '14rem',
-          backgroundColor: 'rgba(34, 197, 94, 0.2)', // green glow
-          filter: 'blur(48px)',
-          transform: 'translate(-50%, -50%)',
-        }}
-      ></div>
-
-      {/* Video Preview */}
-      <div className="px-4 py-4">
+      {/* Visual Header */}
+      <div className="relative aspect-[16/10] overflow-hidden">
         <video
           src={video}
-          className="w-full h-52 rounded-xl object-cover"
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           autoPlay
           loop
           muted
           playsInline
         />
+
+        {/* Modern Overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 backdrop-blur-[2px]">
+          {codeLink && (
+            <button
+              onClick={() => openInNewTab(codeLink)}
+              className="w-12 h-12 bg-white/20 hover:bg-white/40 border border-white/30 rounded-2xl flex items-center justify-center text-white transition-all transform translate-y-4 group-hover:translate-y-0"
+              title="View Source"
+            >
+              <FaGithub size={24} />
+            </button>
+          )}
+          <button
+            onClick={() => openInNewTab(link)}
+            className="w-12 h-12 bg-blue-600 hover:bg-blue-500 rounded-2xl flex items-center justify-center text-white transition-all transform translate-y-4 group-hover:translate-y-0 delay-75"
+            title="Live Preview"
+          >
+            <FaExternalLinkAlt size={20} />
+          </button>
+        </div>
       </div>
 
-      {/* Text Content */}
-      <div className="p-4 pt-2">
-        <h3 className="text-xl font-semibold text-center text-gray-900 dark:text-white mb-2">{name}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300 text-center">{description}</p>
+      {/* Content Area */}
+      <div className="p-8 flex flex-col flex-grow">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">
+            {name}
+          </h3>
+        </div>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
+        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 font-medium">
+          {description}
+        </p>
+
+        {/* Tech Badges - Bottom Aligned */}
+        <div className="mt-auto flex flex-wrap gap-2.5">
           {tech?.map((item, idx) => (
             <span
               key={idx}
-              className="text-xs px-3 py-1 rounded-full bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200"
+              className="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300"
             >
               {item}
             </span>
           ))}
         </div>
-
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 mt-6">
-          <button
-            onClick={() => openInNewTab(link)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm shadow-md transition"
-          >
-            Live
-          </button>
-          {codeLink ? <button
-            onClick={() => openInNewTab(codeLink)}
-            className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm shadow-md transition"
-          >
-            Code
-          </button> : ''}
-          
-        </div>
       </div>
-    </div>
+
+      {/* Luxury Border Glow */}
+      <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500/20 rounded-[2rem] transition-colors duration-500 pointer-events-none" />
+    </motion.div>
   );
 };
 

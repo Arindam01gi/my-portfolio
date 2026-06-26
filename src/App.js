@@ -1,16 +1,18 @@
 import './App.css';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Home from './container/Home';
 import About from './container/About'
 import Contact from './container/Contact';
 import Navbar from './components/Navbar';
-import Project from './container/Project';
+// import Project from './container/Project';
 import Experience from './container/Experience';
 import { Element } from 'react-scroll';
 import Skills from './container/Skills';
 import CustomCursor from './Helper/CustomCursor';
 import { ThemeContext } from './context/ThemeContext';
+
+const Project = lazy(() => import('./container/Project'));
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -41,7 +43,9 @@ function App() {
         <Experience />
       </Element>
       <Element name="projects" id="projects" className="section">
-        <Project />
+        <Suspense fallback={<div className='min-h-[400px] flex justify-center items-center text-2xl font-bold text-gray-500'>Loading Projects...</div>}>
+          <Project />
+        </Suspense>
       </Element>
       <Element name="contact" id="contact" className="section">
         <Contact />
