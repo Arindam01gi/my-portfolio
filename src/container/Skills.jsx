@@ -1,150 +1,64 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import PopUp from '../utils/PopUp'
 
 const Skills = () => {
+  const skills = [
+    { name: "HTML5", icon: "./icons/html.svg", color: "#f8eae7" },
+    { name: "CSS", icon: "./icons/css.svg", color: "#cee8f5" },
+    { name: "JS", icon: "./icons/javascript.svg", color: "#f7eeb9" },
+    { name: "TS", icon: "./icons/typescript.svg", color: "#cee8f5" },
+    { name: "React", icon: "./icons/reactjs.svg", color: "#e3fbff" },
+    { name: "Redux", icon: "./icons/redux.svg", color: "#EFE8FA" },
+    { name: "Python", icon: "./icons/python-5.svg", color: "#f6f1d6" },
+    { name: "Django", icon: "./icons/django.svg", color: "#bdf5df" },
+    { name: "Node JS", icon: "./icons/nodejs.svg", color: "#d9f6e9" },
+    { name: "Git", icon: "./icons/git.svg", color: "#FCECE7" },
+    { name: "C++", icon: "./icons/cpp.svg", color: "#bedcf3" },
+    { name: "C", icon: "./icons/c.svg", color: "#b3bcf3" },
+    { name: "Tailwind", icon: "./icons/tailwind.svg", color: "#c2ebf1" },
+    { name: "MySQL", icon: "./icons/mysql.svg", color: "#d9f6e9" },
+    { name: "AWS", icon: "./icons/aws.svg", color: "#f6f1d6" },
+    { name: "Redis", icon: "./icons/redis.svg", color: "#FCECE7" },
+  ];
+
   return (
-    <div className='bg-blue-50 dark:bg-gray-900 pt-8 flex justify-center items-center '>
-      <div className=' w-5/6 '>
+    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-gray-50 dark:bg-gray-950 transition-colors duration-500">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
-        <h1 className='text-4xl font-extrabold text-body-blue tracking-wide ' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Skills</h1>
+        {/* Consistent Left-Aligned Header */}
+        <PopUp className="mb-12 md:mb-20 w-full text-left">
+          <div className="text-left">
+            <span className="text-blue-600 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-3 block text-left">Technical Stack</span>
+            <h2 className="text-4xl md:text-7xl font-black dark:text-white mb-4 md:mb-6 leading-tight text-left">
+              My <span className="text-blue-500 text-left">Skills</span>
+            </h2>
+            <div className="h-1.5 md:h-2 w-16 md:w-24 bg-blue-500 rounded-full ml-0" />
+          </div>
+        </PopUp>
 
-        <div className='flex justify-center py-12 gap-16 cursor-pointer flex-wrap '>
-          <p className=''>
-            <span className='bg-[#f8eae7] dark:bg-gray-700 p-6 rounded-full inline-block hover:shadow-xl'>
-              <img src="./icons/html.svg" alt="html" className='w-10 h-10  ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              HTML5
-            </p>
-          </p>
-          <p>
-            <span className='bg-[#cee8f5] dark:bg-gray-700 p-6 rounded-full inline-block hover:shadow-xl'>
-              <img src="./icons/css.svg" alt="css" className='w-10 h-10  ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              CSS
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#f7eeb9] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/javascript.svg" alt="javascript" className='w-10 h-10   ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Javascript
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#cee8f5] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/typescript.svg" alt="typescript" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Typescript
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#e3fbff] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/reactjs.svg" alt="typescript" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              React & React Native
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#EFE8FA] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/redux.svg" alt="typescript" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Redux
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#f6f1d6] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/python-5.svg" alt="python" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Python
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#bdf5df] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/django.svg" alt="django" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Django
-            </p>
-          </p>
-          <p className=''>
-            <span className='inline-block bg-[#d9f6e9] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/nodejs.svg" alt="node" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Node Js
-            </p>
-          </p>
-
-          <p>
-            <span className='inline-block bg-[#FCECE7] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/git.svg" alt="git" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Git
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#bedcf3] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/cpp.svg" alt="cpp" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              C++
-            </p>
-          </p>
-          <p>
-            <span className='inline-block bg-[#b3bcf3] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/c.svg" alt="cpp" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              C
-            </p>
-          </p>
-          <p className='mx-4'>
-            <span className='inline-block bg-[#c2ebf1] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/tailwind.svg" alt="tailwind" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Taiwnd CSS
-            </p>
-          </p>
-
-          <p className=''>
-            <span className='inline-block bg-[#d9f6e9] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl '>
-              <img src="./icons/mysql.svg" alt="mysql" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Mysql
-            </p>
-          </p>
-          <p className=''>
-            <span className='inline-block bg-[#f6f1d6] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl '>
-              <img src="./icons/aws.svg" alt="aws" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              AWS
-            </p>
-          </p>
-          <p className=''>
-            <span className='inline-block bg-[#FCECE7] dark:bg-gray-700 p-6 rounded-full hover:shadow-xl'>
-              <img src="./icons/redis.svg" alt="redis" className='w-10 h-10 ' />
-            </span>
-            <p className='text-xs my-3 font-semibold text-black dark:text-white'>
-              Redis
-            </p>
-          </p>
-
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-8">
+          {skills.map((skill, idx) => (
+            <PopUp key={idx} delay={idx * 0.05} className="w-full text-left">
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="group flex flex-col items-start gap-3 md:gap-4"
+              >
+                <div
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl flex items-center justify-center p-3 md:p-5 transition-all duration-500 group-hover:shadow-xl shadow-sm border border-transparent group-hover:border-blue-500/10"
+                  style={{ backgroundColor: skill.color }}
+                >
+                  <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
+                </div>
+                <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 group-hover:text-blue-500 transition-colors px-1">
+                  {skill.name}
+                </span>
+              </motion.div>
+            </PopUp>
+          ))}
         </div>
-
       </div>
-
-
-    </div>
+    </section>
   )
 }
 

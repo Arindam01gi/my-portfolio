@@ -6,6 +6,7 @@ const PopUp = ({
   duration = 0.5, // Default duration if not provided
   delay = 0, // Default delay if not provided
   whileInView = true, // Controls if the animation should trigger only when in view
+  className = "", // Accept custom styles
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { threshold: 0.2 }); // Triggers when 20% of the element is visible
@@ -18,6 +19,7 @@ const PopUp = ({
   return (
     <motion.div
       ref={ref}
+      className={className}
       variants={variants}
       initial="hidden"
       animate={isInView || !whileInView ? "visible" : "hidden"}

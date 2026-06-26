@@ -1,71 +1,69 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, } from 'react-icons/fa';
-// import GoogleMap from './GoogleMap';
-import ContactForm from './ContactForm';
 import PopUp from '../utils/PopUp';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
-    <div className="pt-8 flex justify-center items-center bg-blue-100 dark:bg-gray-900 py-8 min-h-screen">
-      <div className="w-5/6">
-        <h1 className="text-4xl font-extrabold text-body-blue tracking-wide mb-8"
-          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          Contact Me
-        </h1>
+    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-gray-50 dark:bg-gray-950 overflow-hidden transition-colors duration-500">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
-        <PopUp>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Contact Information */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold text-body-blue mb-6">Let's Connect!</h2>
+        {/* Header Section */}
+        <PopUp className="w-full text-left">
+          <div className="mb-10 md:mb-20">
+            <span className="text-blue-600 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-3 block text-left">Get In Touch</span>
+            <h2 className="text-4xl md:text-7xl font-black dark:text-white mb-4 md:mb-6 text-left">
+              Start a <span className="text-blue-500 text-left">Conversation</span>
+            </h2>
+            <div className="h-1.5 md:h-2 w-16 md:w-24 bg-blue-500 rounded-full ml-0" />
+          </div>
+        </PopUp>
 
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="p-3 bg-blue-100 dark:bg-gray-700 rounded-full mr-4">
-                    <FaEnvelope className="text-body-blue text-xl dark:text-body-blue" />
-                  </div>
-                  <div>
-                    {/* <h3 className="font-semibold text-gray-800">Email</h3> */}
-                    <p className="text-gray-600 dark:text-gray-300">arindammaiti2018@gmail.com</p>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-start text-left">
+          <div className="space-y-10 md:space-y-16 w-full text-left">
+            <PopUp delay={0.1} className="w-full text-left">
+              <h3 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white leading-tight text-left">
+                Let's discuss technical bottlenecks or <span className="text-blue-500 text-left">new projects</span>.
+              </h3>
+              <p className="text-base md:text-xl text-gray-500 dark:text-gray-400 font-medium leading-relaxed max-w-md mt-4 text-left">
+                Whether you're looking for a freelancer, a contributor, or just want to connect—my inbox is always open.
+              </p>
+            </PopUp>
 
-                <div className="flex items-center">
-                  <div className="p-3 bg-blue-100 dark:bg-gray-700 rounded-full mr-4">
-                    <FaPhone className="text-body-blue text-xl dark:text-body-blue" />
+            {/* Strictly Left-Aligned Contact Details Blocks */}
+            <div className="space-y-6 md:space-y-10 w-full text-left">
+              {[
+                { label: "Direct Email", value: "arindammaiti2018@gmail.com", delay: 0.2 },
+                { label: "Phone & WhatsApp", value: "+91 8346945439", delay: 0.3 }
+              ].map((item, i) => (
+                <PopUp key={i} delay={item.delay} className="w-full text-left">
+                  <div className="flex flex-col gap-1 md:gap-2 border-l-4 border-blue-500/20 pl-6 md:pl-8 hover:border-blue-500 transition-all duration-300 group text-left">
+                    <span className="text-[9px] md:text-[10px] uppercase font-black text-blue-500 tracking-[0.2em] md:tracking-[0.3em] group-hover:tracking-[0.4em] transition-all text-left">
+                      {item.label}
+                    </span>
+                    <span className="text-lg md:text-2xl font-bold text-gray-900 dark:text-gray-100 text-left break-all">
+                      {item.value}
+                    </span>
                   </div>
-                  <div>
-                    {/* <h3 className="font-semibold text-gray-800">Phone</h3> */}
-                    <p className="text-gray-600 dark:text-gray-300">+91 8346945439</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="p-3 bg-blue-100 dark:bg-gray-700 rounded-full mr-4">
-                    <FaMapMarkerAlt className="text-body-blue text-xl dark:text-body-blue" />
-                  </div>
-                  <div>
-                    {/* <h3 className="font-semibold text-gray-800">Location</h3> */}
-                    <p className="text-gray-600 dark:text-gray-300">Kolkata, India</p>
-                  </div>
-                </div>
-                {/* <div className="flex items-center">
-                  <GoogleMap/>
-              </div> */}
-              </div>
+                </PopUp>
+              ))}
             </div>
-
-            {/* Contact Form */}
-            <ContactForm />
-
           </div>
 
-        </PopUp>
-        <div className="text-center mt-8 text-gray-600 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Arindam Maiti. All rights reserved.
+          <PopUp delay={0.4} className="w-full text-left mt-10 lg:mt-0">
+            <ContactForm />
+          </PopUp>
         </div>
+
+        {/* Footer */}
+        <PopUp delay={0.5} className="w-full text-left">
+          <div className="mt-20 md:mt-32 pt-12 md:pt-16 border-t border-gray-100 dark:border-gray-900">
+            <p className="text-gray-400 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-left">
+              &copy; {new Date().getFullYear()} Arindam Maiti. Built with Intent & Precision.
+            </p>
+          </div>
+        </PopUp>
       </div>
-    </div>
+    </section>
   );
 };
 

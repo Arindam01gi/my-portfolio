@@ -1,86 +1,76 @@
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { FaCode } from 'react-icons/fa';
-import PopUp from '../utils/PopUp';
-import { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';
+
+import PopUp from '../utils/PopUp'
 
 const experiences = [
   {
-    company: "Webskitters Technology Solutions Private Limited",
+    company: "Webskitters Technology Solutions",
     role: "Software Engineer - Nextjs",
-    duration: "Feb,2026 - Present",
-    description: "Software Engineer at Webskitters, architecting VidyaLabh, an end-to-end AI-driven e-learning platform featuring automated LLM curriculum models and multi-role dashboards. Optimized client-side caching with TanStack Query to cut API overhead by 40%, and engineered HLS/WebRTC streaming for sub-500ms video latency.",
-    icon: <FaCode />
+    duration: "Feb, 2026 - Present",
+    desc: "Architecting VidyaLabh, an AI-driven e-learning platform. Optimized client-side caching with TanStack Query and engineered sub-500ms video streaming."
   },
   {
     company: "Mindscale Infinity Solution",
     role: "Senior Developer",
-    duration: "Aug,2023 - Feb,2026",
-    description: "Leading the development of scalable web applications using React, Node.js, and MongoDB. Architecting robust backend systems, optimizing database performance, and implementing RESTful APIs. Mentoring junior developers and ensuring code quality through code reviews and best practices.",
-    icon: <FaCode />
+    duration: "Aug, 2023 - Feb, 2026",
+    desc: "Led development of scalable web applications using React and Node.js. Optimized database performance and mentored junior developers."
   },
   {
     company: "MSQube Technology",
     role: "Backend Django Developer",
-    duration: "Feb,2023 - Aug,2023",
-    description: "Developed and maintained backend systems using Django and Django REST Framework. Designed and implemented database schemas, optimized queries, and built REST APIs for various web applications. Collaborated with frontend teams to ensure seamless integration between backend and frontend systems.",
-    icon: <FaCode />
+    duration: "Feb, 2023 - Aug, 2023",
+    desc: "Developed and maintained backend systems using Django/DRF. Designed database schemas and optimized complex queries."
   }
 ];
 
 const Experience = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className='bg-blue-100 dark:bg-gray-900 py-8 md:py-12 lg:py-16'>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-extrabold text-body-blue tracking-wide mb-8' 
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-          Experience
-        </h1>
+    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-500">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
-        <VerticalTimeline lineColor={theme === 'dark' ? '#4a5568' : '#3b82f6'}>
-          {experiences.map((exp, index) => (
-            <PopUp key={index} duration={0.5} delay={index * 0.2} whileInView={true}>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{
-                  background: theme === 'dark' ? '#334155' : 'white',
-                  color: theme === 'dark' ? '#f8fafc' : '#1e3a8a',
-                  boxShadow: theme === 'dark' ? '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.25)' : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                  borderRadius: '0.5rem',
-                  marginBottom: '2rem'
-                }}
-                contentArrowStyle={{
-                  borderRight: theme === 'dark' ? '7px solid #334155' : '7px solid white'
-                }}
-                date={exp.duration}
-                dateClassName="text-gray-600 dark:text-gray-400"
-                iconStyle={{
-                  background: theme === 'dark' ? '#1f2937' : '#3b82f6',
-                  color: '#fff',
-                  boxShadow: theme === 'dark' ? '0 0 0 4px #4b5563' : '0 0 0 4px #dbeafe'
-                }}
-                icon={exp.icon}
-                position={index % 2 === 0 ? 'left' : 'right'}
-              >
-                <h3 className="vertical-timeline-element-title text-xl font-bold text-body-blue dark:text-body-blue">
-                  {exp.company}
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">
-                  {exp.role}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-left">
-                  {exp.description}
+        <PopUp className="w-full text-left">
+          <div className="text-left mb-12 md:mb-24">
+            <span className="text-blue-600 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-3 block text-left">Professional Path</span>
+            <h2 className="text-4xl md:text-7xl font-black dark:text-white mb-4 md:mb-6 text-left">
+              My <span className="text-blue-500 text-left">Experience</span>
+            </h2>
+            <div className="h-1.5 md:h-2 w-16 md:w-24 bg-blue-500 rounded-full ml-0" />
+          </div>
+        </PopUp>
+
+        <div className="relative border-l-2 border-gray-100 dark:border-gray-800 ml-2 md:ml-8 space-y-16 md:space-y-24 pb-12">
+          {experiences.map((exp, idx) => (
+            <PopUp key={idx} delay={idx * 0.1} className="w-full text-left">
+              <div className="relative pl-8 md:pl-20 group text-left">
+                {/* Timeline Dot */}
+                <div className="absolute -left-[11px] top-1.5 md:top-2 w-4 md:w-5 h-4 md:h-5 rounded-full bg-white dark:bg-gray-900 border-2 md:border-4 border-blue-500 group-hover:bg-blue-500 transition-all duration-500 z-10 shadow-lg" />
+
+                <div className="flex flex-col gap-3 md:gap-4 mb-6 md:mb-8 text-left">
+                  <div className="max-w-4xl text-left">
+                    <h3 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors duration-300 text-left">
+                      {exp.company}
+                    </h3>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-4 mt-2 md:mt-4">
+                      <p className="text-blue-500 font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-[8px] md:text-[10px] text-left">
+                        {exp.role}
+                      </p>
+                      <span className="hidden sm:block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-700" />
+                      <span className="inline-block text-[8px] md:text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 px-3 py-1 rounded-full whitespace-nowrap w-fit">
+                        {exp.duration}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-base md:text-xl text-gray-500 dark:text-gray-400 leading-relaxed max-w-4xl font-medium font-inter text-left">
+                  {exp.desc}
                 </p>
-              </VerticalTimelineElement>
+              </div>
             </PopUp>
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
 
-export default Experience;
+export default Experience
