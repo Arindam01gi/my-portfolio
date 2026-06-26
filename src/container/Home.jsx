@@ -25,17 +25,17 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-white dark:bg-gray-950 flex flex-col overflow-hidden transition-colors duration-500">
+    <section className="min-h-[90vh] lg:min-h-screen bg-white dark:bg-gray-950 flex flex-col overflow-hidden transition-colors duration-500">
 
-      {/* Dynamic Navbar Offset - Scaled for Mobile/Tab/Desktop */}
-      <div className="h-24 sm:h-32 md:h-44 lg:h-64 w-full shrink-0" />
+      {/* Optimized Navbar Offset - Balanced for all screens */}
+      <div className="h-28 md:h-32 lg:h-36 w-full shrink-0" />
 
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative flex-grow flex items-start">
-        {/* Background Accents - Reduced size on mobile */}
+        {/* Background Accents */}
         <div className="absolute -top-12 -left-6 w-32 h-32 md:w-64 md:h-64 bg-blue-500/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none" />
         <div className="absolute top-1/2 -right-6 w-32 h-32 md:w-64 md:h-64 bg-purple-500/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none" />
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-24 w-full pb-16 md:pb-20">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-24 w-full pb-12 md:pb-20">
 
           <AnimatePresence>
             <motion.div

@@ -63,7 +63,7 @@ const Project = () => {
   ];
 
   return (
-    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-gray-50 dark:bg-gray-950 overflow-hidden">
+    <section className="pt-32 pb-20 md:pb-24 bg-gray-50 dark:bg-gray-950 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
         <PopUp className="w-full text-left">

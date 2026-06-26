@@ -1,3 +1,4 @@
+import React from 'react'
 import PopUp from '../utils/PopUp'
 
 const About = () => {
@@ -8,11 +9,11 @@ const About = () => {
   ];
 
   return (
-    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-500">
+    <section className="pt-20 md:pt-32 pb-20 md:pb-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-500">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
         {/* Consistent Left-Aligned Header */}
-        <PopUp className="mb-12 md:mb-20 w-full text-left">
+        <PopUp className="mb-12 md:mb-16 w-full text-left">
           <div className="text-left">
             <span className="text-blue-600 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-3 block text-left">Perspective</span>
             <h2 className="text-4xl md:text-7xl font-black dark:text-white mb-4 md:mb-6 leading-tight text-left">

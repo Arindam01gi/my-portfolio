@@ -1,4 +1,4 @@
-
+import React from 'react'
 import PopUp from '../utils/PopUp'
 
 const experiences = [
@@ -24,11 +24,11 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-500">
+    <section className="pt-20 md:pt-32 pb-20 md:pb-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-500">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
         <PopUp className="w-full text-left">
-          <div className="text-left mb-12 md:mb-24">
+          <div className="text-left mb-12 md:mb-16">
             <span className="text-blue-600 font-bold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[10px] mb-3 block text-left">Professional Path</span>
             <h2 className="text-4xl md:text-7xl font-black dark:text-white mb-4 md:mb-6 text-left">
               My <span className="text-blue-500 text-left">Experience</span>
@@ -37,7 +37,7 @@ const Experience = () => {
           </div>
         </PopUp>
 
-        <div className="relative border-l-2 border-gray-100 dark:border-gray-800 ml-2 md:ml-8 space-y-16 md:space-y-24 pb-12">
+        <div className="relative border-l-2 border-gray-100 dark:border-gray-800 ml-2 md:ml-8 space-y-16 md:space-y-20 pb-12">
           {experiences.map((exp, idx) => (
             <PopUp key={idx} delay={idx * 0.1} className="w-full text-left">
               <div className="relative pl-8 md:pl-20 group text-left">

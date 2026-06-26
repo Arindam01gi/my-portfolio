@@ -23,7 +23,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="pt-24 md:pt-40 pb-20 md:pb-32 bg-gray-50 dark:bg-gray-950 transition-colors duration-500">
+    <section className="pt-20 md:pt-32 pb-20 md:pb-24 bg-gray-50 dark:bg-gray-950 transition-colors duration-500">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
 
         {/* Consistent Left-Aligned Header */}
