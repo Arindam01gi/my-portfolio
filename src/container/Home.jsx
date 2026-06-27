@@ -86,7 +86,7 @@ const Home = () => {
                 <div className="flex items-center gap-5 md:gap-6 ml-auto sm:ml-0">
                   {[
                     { icon: <FaGithub size={22} />, url: "https://github.com/Arindam01gi" },
-                    { icon: <FaLinkedin size={22} />, url: "https://linkedin.com/in/arindam01gi" },
+                    { icon: <FaLinkedin size={22} />, url: "https://linkedin.com/in/arindam-maiti" },
                     { icon: <RiTwitterXFill size={22} />, url: "https://x.com/Arindam1304" },
                     { icon: <FaEnvelope size={22} />, url: "mailto:arindammaiti2018@gmail.com" }
                   ].map((social, i) => (
