@@ -35,7 +35,7 @@ const ProjectCardContent = [
     "name": "Resolveby",
     "video": "/video/resolveby.webm",
     "description": "ResolveBy's website is a strategic asset driving business growth and customer trust by efficiently addressing software-related issues",
-    "link": "https://resolveby.com/",
+    "link": "https://resolveby.transfermax.online/",
     tech: ["React", "Redux", "Tailwind CSS", "Vercel", "Framer motion", "GSAP"],
     category: "frontend"
   },
